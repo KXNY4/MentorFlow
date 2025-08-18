@@ -51,7 +51,6 @@ services:
       restart: unless-stopped
       env_file:
           - ./.envs/.local/rabbitmq.env
-      # expose:
       ports:
           - "5672:5672"
           - "15672:15672"
@@ -97,10 +96,6 @@ services:
       container_name: flower
       restart: unless-stopped
       command: celery flower --persisten=True
-      # command: >
-      #     flower
-      #     --broker=amqp://${RABBITMQ_DEFAULT_USER}:${RABBITMQ_DEFAULT_PASS}@${RABBITMQ_HOST}:${RABBITMQ_PORT}//
-      #     --port=5555
       env_file:
           - ./.envs/.local/django.env
       ports:
