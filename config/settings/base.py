@@ -35,6 +35,10 @@ INSTALLED_APPS = [
     "djoser",
     "djcelery_email",
     # LOCAL_APPS
+    "apps.users",
+    "apps.allsessions",
+    "apps.topic",
+    "apps.aiinteraction"
 ]
 
 MIDDLEWARE = [
@@ -130,7 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # DEFAULT USER MODEL
 
-# AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "users.User"
 
 
 # CELERY

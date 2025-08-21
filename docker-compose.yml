@@ -32,7 +32,7 @@ services:
     ports:
       - "5432:5432"
     env_file:
-      - ./.envs/.local/postgresql.env
+      - ./.envs/.local/postgres.env
     networks:
       - mentor-flow
 
